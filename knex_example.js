@@ -33,6 +33,7 @@ knex('famous_people').returning('id').insert([
    birthdate: '1809-02-12T00:00:00.000Z'}
 ]).then((id) => {
   console.log(id);
+
   knex.select('*').from('famous_people').then((rows) => {
       console.log(rows);
   }).catch((err) => {
